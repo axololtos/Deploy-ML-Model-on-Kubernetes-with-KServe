@@ -1,0 +1,19 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: predictor-model
+spec:
+  predictor:
+    containers:
+    - name: kserve-container
+      image: axololtos/predictor-model:1.0
+      ports:
+      - containerPort: 8080
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 500m
+          memory: 1Gi
+        limits:
+          cpu: 1000m
+          memory: 2Gi

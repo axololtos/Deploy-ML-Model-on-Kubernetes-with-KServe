@@ -1,1 +1,2 @@
-# Deploy-ML-Model-on-Kubernetes-with-KServe
+# predictor-model
+a simple predictor model
